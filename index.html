@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Primary ─────────────────────────────────── -->
+  <title>Zona Ninja — Centro de Entrenamiento Funcional, Cross y OCR</title>
+  <meta name="description" content="Zona Ninja: Centro de entrenamiento Funcional, Cross y OCR en Mucho Lote 2, Guayaquil. Planes desde $30/mes. Promos de apertura disponibles. ¡Únete hoy!" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Zona Ninja" />
+
+  <!-- ── Open Graph (redes sociales) ────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Zona Ninja — Entrenamiento Funcional, Cross y OCR" />
+  <meta property="og:description" content="Entrena sin límites. Planes de apertura desde $30/mes. Funcional · Cross · OCR — Para atletas de todos los niveles." />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?w=1200&h=630&fit=crop&auto=format" />
+  <meta property="og:url"         content="https://zonaninja.com" />
+  <meta property="og:locale"      content="es_EC" />
+
+  <!-- ── Twitter Card ────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Zona Ninja — Centro de Entrenamiento" />
+  <meta name="twitter:description" content="Funcional · Cross · OCR. Promos de apertura. ¡Únete hoy!" />
+  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?w=1200&h=630&fit=crop&auto=format" />
+
+  <!-- ── Fuentes (Google Fonts) ──────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ── Estilos ──────────────────────────────────────── -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- ── Favicon (placeholder inline SVG) ────────────── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23cc1414'/><text y='.9em' font-size='90' x='50%' text-anchor='middle'>🥷</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="header__logo" aria-label="Zona Ninja — Inicio">
+          <div class="logo__img-wrap">
+            <img
+              src="./assets/img/logo.png"
+              alt="Logo Zona Ninja"
+              width="56"
+              height="56"
+            />
+          </div>
+          <span class="logo__name">Zona Ninja</span>
+        </a>
+
+        <!-- Navegación Desktop -->
+        <nav class="header__nav" aria-label="Navegación principal">
+          <a href="#ofrecemos" class="nav__link">Ofrecemos</a>
+          <a href="#planes"    class="nav__link">Planes</a>
+          <a href="#horarios"  class="nav__link">Horarios</a>
+        </nav>
+
+        <!-- Acciones -->
+        <div class="header__actions">
+          <a href="#planes" class="btn-cta" style="display:none;" id="header-cta">Únete hoy</a>
+
+          <!-- Hamburguesa (mobile) -->
+          <button
+            id="btn-hamburger"
+            class="btn-hamburger"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <!-- Icono Menu -->
+            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6"  x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            <!-- Icono Close -->
+            <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;">
+              <line x1="18" y1="6"  x2="6"  y2="18"/>
+              <line x1="6"  y1="6"  x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú Móvil -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Menú móvil">
+      <a href="#ofrecemos" class="mobile-nav__link">Ofrecemos</a>
+      <a href="#planes"    class="mobile-nav__link">Planes</a>
+      <a href="#horarios"  class="mobile-nav__link">Horarios</a>
+      <a href="#planes" class="btn-cta">Únete hoy</a>
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section id="hero" class="hero" aria-label="Bienvenida">
+
+      <!-- Fondo con imagen -->
+      <div class="hero__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?w=1920&h=1080&fit=crop&auto=format"
+          alt="Atleta entrenando en gimnasio oscuro"
+          class="hero__img"
+          loading="eager"
+          fetchpriority="high"
+          width="1920"
+          height="1080"
+        />
+        <div class="hero__overlay"></div>
+        <div class="hero__overlay-top"></div>
+        <div class="hero__streak"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__inner">
+
+          <!-- Pretag -->
+          <div class="hero__pretag" aria-hidden="true">
+            <div class="hero__pretag-line"></div>
+            <span class="hero__pretag-text">Centro de Entrenamiento</span>
+          </div>
+
+          <!-- Título principal -->
+          <h1 class="hero__title">
+            QUE <mark>NINGÚN</mark><br>
+            OBSTÁCULO<br>
+            TE DETENGA
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="hero__subtitle">
+            Funcional
+            <span class="dots">•</span>
+            Cross
+            <span class="dots">•</span>
+            OCR
+            <span class="hero__tagline">Transforma tu cuerpo. Supera tus límites.</span>
+          </p>
+
+          <!-- CTA principal -->
+          <a href="#planes" class="btn-hero" id="hero-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+            </svg>
+            Ver Promociones de Apertura
+          </a>
+
+        </div>
+      </div>
+
+      <div class="hero__bottom-fade" aria-hidden="true"></div>
+    </section>
+
+
+    <!-- ── OFRECEMOS ───────────────────────────────────── -->
+    <section id="ofrecemos" class="offerings" aria-labelledby="offerings-title">
+      <div class="container">
+
+        <header class="offerings__header fade-in">
+          <div class="section-label" aria-hidden="true">
+            <div class="section-label__line"></div>
+            <span class="section-label__text">Beneficios</span>
+          </div>
+          <h2 id="offerings-title" class="section-title">
+            ¿Qué <span>ofrecemos?</span>
+          </h2>
+        </header>
+
+        <div class="offerings__grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Users icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Para todos los niveles</h3>
+            <p class="offering-card__desc">Principiante, intermedio o avanzado — aquí todos tienen lugar.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Target icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Rutinas personalizadas</h3>
+            <p class="offering-card__desc">Planes guiados diseñados para tus objetivos reales.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Flame icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Ambiente motivador</h3>
+            <p class="offering-card__desc">Un equipo profesional que te impulsa a dar el 100%.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Clases dinámicas y funcionales</h3>
+            <p class="offering-card__desc">Functional, Cross y OCR para un entrenamiento completo.</p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Trophy icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Resultados reales</h3>
+            <p class="offering-card__desc">Metodología probada que transforma cuerpo y mente.</p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Dumbbell icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M14.4 14.4 9.6 9.6"/>
+                <path d="M18.657 3.343a1 1 0 0 1 0 1.414L14.95 8.464a1 1 0 0 1-1.414 0l-1-1a1 1 0 0 1 0-1.414l3.707-3.707a1 1 0 0 1 1.414 0z"/>
+                <path d="M21.121 6.464a1 1 0 0 1 0 1.414l-1.172 1.172a1 1 0 0 1-1.414 0l-1-1a1 1 0 0 1 0-1.414l1.172-1.172a1 1 0 0 1 1.414 0z"/>
+                <path d="M5.343 18.657a1 1 0 0 1 0-1.414l3.707-3.707a1 1 0 0 1 1.414 0l1 1a1 1 0 0 1 0 1.414l-3.707 3.707a1 1 0 0 1-1.414 0z"/>
+                <path d="M2.879 16.121a1 1 0 0 1 0-1.414l1.172-1.172a1 1 0 0 1 1.414 0l1 1a1 1 0 0 1 0 1.414l-1.172 1.172a1 1 0 0 1-1.414 0z"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Equipamiento de élite</h3>
+            <p class="offering-card__desc">Instalaciones equipadas para entrenar sin límites.</p>
+          </article>
+
+        </div><!-- /offerings__grid -->
+      </div>
+    </section>
+
+
+    <!-- ── PLANES ──────────────────────────────────────── -->
+    <section id="planes" class="plans" aria-labelledby="plans-title">
+      <div class="plans__texture" aria-hidden="true"></div>
+      <div class="container" style="position:relative;">
+
+        <header class="plans__header fade-in">
+          <div class="section-label" aria-hidden="true">
+            <div class="section-label__line"></div>
+            <span class="section-label__text">Precios de Apertura</span>
+            <div class="section-label__line"></div>
+          </div>
+          <h2 id="plans-title" class="section-title">
+            Planes &amp; <span>Promociones</span>
+          </h2>
+        </header>
+
+        <div class="plans__grid">
+
+          <!-- Plan 1: Promo Fundadores -->
+          <article class="plan-card plan-card--featured fade-in" aria-labelledby="plan-fundadores-name">
+            <div class="plan-card__top-bar" aria-hidden="true"></div>
+
+            <!-- Badge destacado -->
+            <div class="plan-card__badge" aria-label="Precio congelado por 3 meses">
+              PRECIO CONGELADO<br>POR 3 MESES
+            </div>
+
+            <div class="plan-card__body">
+              <header>
+                <h3 id="plan-fundadores-name" class="plan-card__name">Promo Fundadores</h3>
+                <p class="plan-card__subtitle">Primeros inscritos</p>
+              </header>
+
+              <ul class="price-list" aria-label="Opciones de plan Fundadores">
+                <li class="price-item">
+                  <div class="price-item__left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span class="price-item__name">Funcional / Cross</span>
+                  </div>
+                  <span class="price-item__price">$30<span>/mes</span></span>
+                </li>
+                <li class="price-item">
+                  <div class="price-item__left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span class="price-item__name">Funcional + Cross</span>
+                  </div>
+                  <span class="price-item__price">$40<span>/mes</span></span>
+                </li>
+                <li class="price-item">
+                  <div class="price-item__left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span class="price-item__name">Full Ninja</span>
+                  </div>
+                  <span class="price-item__price">$50<span>/mes</span></span>
+                </li>
+              </ul>
+
+              <a
+                href="https://wa.me/593962807366"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-plan btn-plan--primary"
+                id="cta-fundadores"
+              >
+                Inscribirme ahora
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 2: Promo Entre Panas -->
+          <article class="plan-card plan-card--secondary fade-in" aria-labelledby="plan-panas-name">
+            <div class="plan-card__top-bar" aria-hidden="true"></div>
+
+            <div class="plan-card__body">
+              <header>
+                <h3 id="plan-panas-name" class="plan-card__name">Promo Entre Panas</h3>
+                <p class="plan-card__subtitle">Trae a un amigo</p>
+              </header>
+
+              <!-- Beneficios visuales -->
+              <div class="benefit-box" aria-label="Beneficios de la promo Entre Panas">
+                <div class="benefit-item">
+                  <div class="benefit-item__icon" aria-hidden="true">
+                    <span>-$5</span>
+                  </div>
+                  <div>
+                    <p class="benefit-item__title">$5 de descuento</p>
+                    <p class="benefit-item__desc">Para cada uno de los inscritos.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-divider" aria-hidden="true"></div>
+
+                <div class="benefit-item">
+                  <div class="benefit-item__icon benefit-item__icon--outline" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="benefit-item__title">+1 Clase OCR / semana</p>
+                    <p class="benefit-item__desc">Durante 1 mes completo.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="plan-card__disclaimer">
+                Ambos deben inscribirse en el mismo mes para acceder a los beneficios. Aplica con cualquier plan.
+              </p>
+
+              <a
+                href="https://wa.me/593962807366"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-plan btn-plan--outline"
+                id="cta-entre-panas"
+              >
+                Trae a tu pana
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /plans__grid -->
+      </div>
+    </section>
+
+
+    <!-- ── HORARIOS ────────────────────────────────────── -->
+    <section id="horarios" class="schedule" aria-labelledby="schedule-title">
+      <div class="container">
+
+        <header class="schedule__header fade-in">
+          <div class="section-label" aria-hidden="true">
+            <div class="section-label__line"></div>
+            <span class="section-label__text">Horarios</span>
+            <div class="section-label__line"></div>
+          </div>
+          <h2 id="schedule-title" class="section-title">
+            Entrena cuando <span>quieras</span>
+          </h2>
+        </header>
+
+        <div class="schedule__grid">
+
+          <!-- Lunes a Viernes -->
+          <article class="schedule-card fade-in" aria-labelledby="schedule-weekdays">
+            <div class="schedule-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <h3 id="schedule-weekdays" class="schedule-card__day">Lunes — Viernes</h3>
+            </div>
+            <div class="schedule-card__slots">
+              <div class="schedule-slot">
+                <time class="schedule-slot__time" datetime="06:00">06:00 – 11:00</time>
+              </div>
+              <div class="schedule-slot">
+                <time class="schedule-slot__time" datetime="17:00">17:00 – 21:00</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sábados -->
+          <article class="schedule-card fade-in" aria-labelledby="schedule-saturday">
+            <div class="schedule-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <h3 id="schedule-saturday" class="schedule-card__day">Sábados</h3>
+            </div>
+            <div class="schedule-card__slots">
+              <div class="schedule-slot">
+                <time class="schedule-slot__time" datetime="11:00">11:00 – 12:00</time>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="schedule__tagline fade-in">Sin excusas. El momento es ahora.</p>
+
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Columna Marca -->
+        <div class="footer__brand fade-in">
+          <div class="footer__logo">
+            <div class="footer__logo-img">
+              <img
+                src="./assets/img/logo.png"
+                alt="Logo Zona Ninja"
+                width="80"
+                height="80"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p class="footer__logo-name">Zona Ninja</p>
+              <p class="footer__logo-tagline">Centro de Entrenamiento</p>
+            </div>
+          </div>
+          <p class="footer__desc">
+            "Que ningún obstáculo te detenga." Entrenamiento Funcional, Cross y OCR para atletas de todos los niveles.
+          </p>
+        </div>
+
+        <!-- Columna Contacto -->
+        <nav class="footer__contact fade-in" aria-label="Información de contacto">
+          <h2 class="footer__contact-title">Contacto</h2>
+          <address class="footer__contacts" style="font-style:normal;">
+
+            <a
+              href="https://wa.me/593962807366"
+              class="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp: +593 96 280 7366"
+            >
+              <div class="contact-link__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-link__label">WhatsApp</p>
+                <p class="contact-link__value">+593 96 280 7366</p>
+              </div>
+            </a>
+
+            <a
+              href="https://instagram.com/zonaninjafit"
+              class="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram: @zonaninjafit"
+            >
+              <div class="contact-link__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-link__label">Instagram</p>
+                <p class="contact-link__value">@zonaninjafit</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:zonaninjafit@gmail.com"
+              class="contact-link"
+              aria-label="Correo: zonaninjafit@gmail.com"
+            >
+              <div class="contact-link__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-link__label">Correo</p>
+                <p class="contact-link__value">zonaninjafit@gmail.com</p>
+              </div>
+            </a>
+
+            <a
+              href="https://maps.google.com/?q=Mucho+Lote+2,+Cdla+Alameda+del+Río,+Guayaquil"
+              class="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ubicación: Mucho Lote 2 - Cdla. Alameda del Río"
+            >
+              <div class="contact-link__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-link__label">Ubicación</p>
+                <p class="contact-link__value">Mucho Lote 2 — Cdla. Alameda del Río</p>
+              </div>
+            </a>
+
+          </address>
+        </nav>
+
+      </div><!-- /footer__grid -->
+
+      <!-- Barra inferior -->
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Zona Ninja. Todos los derechos reservados.</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ── CTA Header (visible desde SM) — mostrado por CSS ─────── -->
+  <script>
+    // Muestra el botón CTA del header solo en pantallas >= 640px
+    // (sin depender de Tailwind o media queries en JS)
+    var cta = document.getElementById('header-cta');
+    if (cta) {
+      var mq = window.matchMedia('(min-width: 640px)');
+      function toggleCta(e) { cta.style.display = e.matches ? 'inline-flex' : 'none'; }
+      toggleCta(mq);
+      mq.addEventListener('change', toggleCta);
+    }
+  </script>
+
+  <!-- ── JavaScript principal ─────────────────────────────────── -->
+  <script src="./js/main.js" defer></script>
+
+</body>
+</html>
