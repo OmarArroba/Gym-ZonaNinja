@@ -52,7 +52,7 @@
         <a href="#hero" class="header__logo" aria-label="Zona Ninja — Inicio">
           <div class="logo__img-wrap">
             <img
-              src="./assets/img/logo.png"
+              src="./assets/img/logo.webp"
               alt="Logo Zona Ninja"
               width="56"
               height="56"
@@ -63,7 +63,8 @@
 
         <!-- Navegación Desktop -->
         <nav class="header__nav" aria-label="Navegación principal">
-          <a href="#ofrecemos" class="nav__link">Ofrecemos</a>
+          <a href="#ofrecemos" class="nav__link">Beneficios</a>
+          <a href="#disciplinas" class="nav__link">Disciplinas</a>
           <a href="#planes"    class="nav__link">Planes</a>
           <a href="#horarios"  class="nav__link">Horarios</a>
         </nav>
@@ -100,6 +101,7 @@
     <!-- Menú Móvil -->
     <nav id="mobile-nav" class="mobile-nav" aria-label="Menú móvil">
       <a href="#ofrecemos" class="mobile-nav__link">Ofrecemos</a>
+      <a href="#disciplinas" class="mobile-nav__link">Disciplinas</a>
       <a href="#planes"    class="mobile-nav__link">Planes</a>
       <a href="#horarios"  class="mobile-nav__link">Horarios</a>
       <a href="#planes" class="btn-cta">Únete hoy</a>
@@ -115,17 +117,24 @@
     <!-- ── HERO ───────────────────────────────────────── -->
     <section id="hero" class="hero" aria-label="Bienvenida">
 
-      <!-- Fondo con imagen -->
+      <!-- Fondo: izquierda a la izquierda, derecha a la derecha -->
       <div class="hero__bg" aria-hidden="true">
-        <img
-          src="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?w=1920&h=1080&fit=crop&auto=format"
-          alt="Atleta entrenando en gimnasio oscuro"
-          class="hero__img"
-          loading="eager"
-          fetchpriority="high"
-          width="1920"
-          height="1080"
-        />
+        <div class="hero__bg-split">
+          <img
+            src="./assets/img/izquierda.webp"
+            alt=""
+            class="hero__img hero__img--left"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <img
+            src="./assets/img/derecha.webp"
+            alt=""
+            class="hero__img hero__img--right"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
         <div class="hero__overlay"></div>
         <div class="hero__overlay-top"></div>
         <div class="hero__streak"></div>
@@ -162,7 +171,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
             </svg>
-            Ver Promociones de Apertura
+            Ver Membresía
           </a>
 
         </div>
@@ -280,7 +289,129 @@
             <p class="offering-card__desc">Instalaciones equipadas para entrenar sin límites.</p>
           </article>
 
+          <!-- Card 7 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Chat icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Comunidad de Apoyo</h3>
+            <p class="offering-card__desc">Acceso a nuestro grupo de WhatsApp para resolver dudas y mantener la motivación todos los días.</p>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="offering-card fade-in" role="listitem">
+            <div class="offering-card__accent" aria-hidden="true"></div>
+            <div class="offering-card__icon" aria-hidden="true">
+              <!-- Activity icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3 class="offering-card__title">Monitoreo de Resultados</h3>
+            <p class="offering-card__desc">Evaluaciones mensuales de peso y medidas para llevar un control exacto de tu evolución física.</p>
+          </article>
+
         </div><!-- /offerings__grid -->
+      </div>
+    </section>
+
+
+    <!-- ── DISCIPLINAS ─────────────────────────────────── -->
+    <section id="disciplinas" class="disciplines" aria-labelledby="disciplines-title">
+      <div class="disciplines__texture" aria-hidden="true"></div>
+      <div class="container" style="position:relative;">
+
+        <header class="disciplines__header fade-in">
+          <div class="section-label" aria-hidden="true" style="justify-content: center;">
+            <div class="section-label__line"></div>
+            <span class="section-label__text">Nuestras Disciplinas</span>
+            <div class="section-label__line" style="display: block;"></div>
+          </div>
+          <h2 id="disciplines-title" class="section-title" style="text-align: center;">
+            Diferencia entre <span>Funcional &bull; Cross &bull; OCR</span>
+          </h2>
+        </header>
+
+        <div class="disciplines__grid">
+
+          <!-- Nivel 1 -->
+          <article class="discipline-card fade-in">
+            <p class="discipline-card__level">Nivel 1</p>
+            <h3 class="discipline-card__title">Entrenamiento<br>Funcional</h3>
+            <ul class="discipline-list">
+              <li>Base del movimiento y la salud</li>
+              <li>Intensidad <span class="text-red">MODERADA</span></li>
+              <li>Movimientos naturales</li>
+              <li>Fuerza y equilibrio</li>
+              <li>Previene lesiones</li>
+            </ul>
+
+            <div class="discipline-card__summary-inline">
+              <p class="summary-block__title">Funcional</p>
+              <p class="summary-block__value">Moderada</p>
+              <p class="summary-block__desc">Salud y control</p>
+            </div>
+
+            <div class="discipline-card__divider"></div>
+            <div class="discipline-card__footer">
+              <span class="star-icon">★</span> Ideal para principiantes
+            </div>
+          </article>
+
+          <!-- Nivel 2 -->
+          <article class="discipline-card discipline-card--highlight fade-in">
+            <p class="discipline-card__level">Nivel 2</p>
+            <h3 class="discipline-card__title">Cross<br>Training</h3>
+            <ul class="discipline-list">
+              <li>Rendimiento físico total</li>
+              <li>Alta <span class="text-red">INTENSIDAD</span></li>
+              <li>Fuerza + Cardio</li>
+              <li>Entrenamientos exigentes</li>
+              <li>Potencia y Resistencia</li>
+            </ul>
+
+            <div class="discipline-card__summary-inline">
+              <p class="summary-block__title">Cross Training</p>
+              <p class="summary-block__value">Alta Intensidad</p>
+              <p class="summary-block__desc">Fuerza total</p>
+            </div>
+
+            <div class="discipline-card__divider"></div>
+            <div class="discipline-card__footer">
+              <span class="star-icon">★</span> Ideal para intermedios / avanzados
+            </div>
+          </article>
+
+          <!-- Nivel 3 -->
+          <article class="discipline-card fade-in">
+            <p class="discipline-card__level">Nivel 3</p>
+            <h3 class="discipline-card__title">OCR</h3>
+            <p class="discipline-card__subtitle">Obstacle Course Racing</p>
+            <ul class="discipline-list" style="margin-top: 1.25rem;">
+              <li>Estilo <span class="text-red">NINJA</span> / Carreras de Obstáculos</li>
+              <li>Alta + <span class="text-red">TÉCNICA</span></li>
+              <li>Trepa y agarre</li>
+              <li>Obstáculos reales</li>
+              <li>Agilidad y Resistencia Mental</li>
+            </ul>
+
+            <div class="discipline-card__summary-inline">
+              <p class="summary-block__title">OCR</p>
+              <p class="summary-block__value">Técnica + Obstáculos</p>
+              <p class="summary-block__desc">Fuerza y Agilidad</p>
+            </div>
+
+            <div class="discipline-card__divider"></div>
+            <div class="discipline-card__footer">
+              <span class="star-icon">★</span> Ideal para avanzados / competidores
+            </div>
+          </article>
+
+        </div><!-- /disciplines__grid -->
       </div>
     </section>
 
@@ -291,132 +422,109 @@
       <div class="container" style="position:relative;">
 
         <header class="plans__header fade-in">
-          <div class="section-label" aria-hidden="true">
+          <div class="section-label section-label--center" aria-hidden="true" style="justify-content: center;">
             <div class="section-label__line"></div>
-            <span class="section-label__text">Precios de Apertura</span>
-            <div class="section-label__line"></div>
+            <span class="section-label__text">Membresía</span>
+            <div class="section-label__line" style="display: block;"></div>
           </div>
-          <h2 id="plans-title" class="section-title">
+          <h2 id="plans-title" class="section-title" style="text-align: center;">
             Planes &amp; <span>Promociones</span>
           </h2>
         </header>
 
-        <div class="plans__grid">
+        <div class="plan-hero-card fade-in">
+          <!-- Columna Izquierda: Información Principal -->
+          <div class="plan-hero-card__main">
+            <h3 class="plan-hero-card__title">Full Ninja</h3>
+            <p class="plan-hero-card__subtitle">Ilimitado</p>
+            <p class="plan-hero-card__tag">Entrena todo, sin límites</p>
 
-          <!-- Plan 1: Promo Fundadores -->
-          <article class="plan-card plan-card--featured fade-in" aria-labelledby="plan-fundadores-name">
-            <div class="plan-card__top-bar" aria-hidden="true"></div>
-
-            <!-- Badge destacado -->
-            <div class="plan-card__badge" aria-label="Precio congelado por 3 meses">
-              PRECIO CONGELADO<br>POR 3 MESES
+            <div class="plan-hero-card__pricing">
+              <span class="plan-hero-card__price">$40</span>
+              <span class="plan-hero-card__period">/mes</span>
             </div>
 
-            <div class="plan-card__body">
-              <header>
-                <h3 id="plan-fundadores-name" class="plan-card__name">Promo Fundadores</h3>
-                <p class="plan-card__subtitle">Primeros inscritos</p>
-              </header>
+            <p class="plan-hero-card__desc">
+              Por solo <strong>$40</strong> al mes puedes tomar <strong>todas las clases que desees</strong>, los días que tú decidas.
+            </p>
 
-              <ul class="price-list" aria-label="Opciones de plan Fundadores">
-                <li class="price-item">
-                  <div class="price-item__left">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                      <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <span class="price-item__name">Funcional / Cross</span>
-                  </div>
-                  <span class="price-item__price">$30<span>/mes</span></span>
-                </li>
-                <li class="price-item">
-                  <div class="price-item__left">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                      <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <span class="price-item__name">Funcional + Cross</span>
-                  </div>
-                  <span class="price-item__price">$40<span>/mes</span></span>
-                </li>
-                <li class="price-item">
-                  <div class="price-item__left">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                      <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <span class="price-item__name">Full Ninja</span>
-                  </div>
-                  <span class="price-item__price">$50<span>/mes</span></span>
-                </li>
-              </ul>
+            <a href="https://wa.me/593962807366?text=Hola,%20quiero%20inscribirme%20al%20plan%20Full%20Ninja%20Ilimitado%20por%20$40/mes."
+               target="_blank" rel="noopener noreferrer"
+               class="btn-plan btn-plan--primary plan-hero-card__btn">
+              Inscribirme ahora
+            </a>
+          </div>
 
-              <a
-                href="https://wa.me/593962807366"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-plan btn-plan--primary"
-                id="cta-fundadores"
-              >
-                Inscribirme ahora
-              </a>
+          <!-- Columna Derecha: Beneficios -->
+          <div class="plan-hero-card__benefits">
+            <h4 class="plan-hero-card__list-title">Disciplinas incluidas</h4>
+            <ul class="plan-hero-card__disciplines">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Funcional
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Cross Training
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                OCR
+              </li>
+            </ul>
+
+            <div class="plan-hero-card__divider"></div>
+
+            <ul class="plan-hero-card__features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Combínalas como quieras
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Asiste los días que tú decidas
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Entrenamiento guiado y adaptado a tu nivel
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Horarios flexibles
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+                Ideal para resultados reales
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta secundaria: Clase Diaria -->
+        <div class="plan-daily-card fade-in">
+          <div class="plan-daily-card__left">
+            <div class="plan-daily-card__badge">También disponible</div>
+            <h3 class="plan-daily-card__title">Clase Diaria</h3>
+          </div>
+          <div class="plan-daily-card__center">
+            <ul class="plan-daily-card__desc">
+              <li>Entra un día sin compromiso.</li>
+              <li>Asiste en cualquier horario.</li>
+            </ul>
+          </div>
+          <div class="plan-daily-card__right">
+            <div class="plan-daily-card__pricing">
+              <span class="plan-daily-card__price">$3</span>
+              <span class="plan-daily-card__period">/clase</span>
             </div>
-          </article>
+            <a href="https://wa.me/593962807366?text=Hola,%20quiero%20ir%20a%20una%20clase%20diaria%20por%20$3."
+               target="_blank" rel="noopener noreferrer"
+               class="plan-daily-card__btn">
+              Consultar
+            </a>
+          </div>
+        </div>
 
-          <!-- Plan 2: Promo Entre Panas -->
-          <article class="plan-card plan-card--secondary fade-in" aria-labelledby="plan-panas-name">
-            <div class="plan-card__top-bar" aria-hidden="true"></div>
-
-            <div class="plan-card__body">
-              <header>
-                <h3 id="plan-panas-name" class="plan-card__name">Promo Entre Panas</h3>
-                <p class="plan-card__subtitle">Trae a un amigo</p>
-              </header>
-
-              <!-- Beneficios visuales -->
-              <div class="benefit-box" aria-label="Beneficios de la promo Entre Panas">
-                <div class="benefit-item">
-                  <div class="benefit-item__icon" aria-hidden="true">
-                    <span>-$5</span>
-                  </div>
-                  <div>
-                    <p class="benefit-item__title">$5 de descuento</p>
-                    <p class="benefit-item__desc">Para cada uno de los inscritos.</p>
-                  </div>
-                </div>
-
-                <div class="benefit-divider" aria-hidden="true"></div>
-
-                <div class="benefit-item">
-                  <div class="benefit-item__icon benefit-item__icon--outline" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="benefit-item__title">+1 Clase OCR / semana</p>
-                    <p class="benefit-item__desc">Durante 1 mes completo.</p>
-                  </div>
-                </div>
-              </div>
-
-              <p class="plan-card__disclaimer">
-                Ambos deben inscribirse en el mismo mes para acceder a los beneficios. Aplica con cualquier plan.
-              </p>
-
-              <a
-                href="https://wa.me/593962807366"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-plan btn-plan--outline"
-                id="cta-entre-panas"
-              >
-                Trae a tu pana
-              </a>
-            </div>
-          </article>
-
-        </div><!-- /plans__grid -->
       </div>
     </section>
 
@@ -426,56 +534,65 @@
       <div class="container">
 
         <header class="schedule__header fade-in">
-          <div class="section-label" aria-hidden="true">
+          <div class="section-label section-label--center" aria-hidden="true" style="justify-content: center;">
             <div class="section-label__line"></div>
             <span class="section-label__text">Horarios</span>
-            <div class="section-label__line"></div>
+            <div class="section-label__line" style="display: block;"></div>
           </div>
-          <h2 id="schedule-title" class="section-title">
+          <h2 id="schedule-title" class="section-title" style="text-align: center;">
             Entrena cuando <span>quieras</span>
           </h2>
         </header>
 
-        <div class="schedule__grid">
+        <!-- New Banner -->
+        <div class="schedule-banner fade-in">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <p><strong>Una sola rutina</strong> para todas las clases del día &mdash; elige el horario que más te convenga.</p>
+        </div>
 
-          <!-- Lunes a Viernes -->
-          <article class="schedule-card fade-in" aria-labelledby="schedule-weekdays">
-            <div class="schedule-card__header">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <h3 id="schedule-weekdays" class="schedule-card__day">Lunes — Viernes</h3>
+        <!-- New Grid -->
+        <div class="schedule-grid fade-in">
+          <!-- Lunes - Viernes -->
+          <div class="schedule-card-new">
+            <div class="schedule-card-new__header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <h3>Lunes &ndash; Viernes</h3>
             </div>
-            <div class="schedule-card__slots">
-              <div class="schedule-slot">
-                <time class="schedule-slot__time" datetime="06:00">06:00 – 11:00</time>
-              </div>
-              <div class="schedule-slot">
-                <time class="schedule-slot__time" datetime="17:00">17:00 – 21:00</time>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sábados -->
-          <article class="schedule-card fade-in" aria-labelledby="schedule-saturday">
-            <div class="schedule-card__header">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <h3 id="schedule-saturday" class="schedule-card__day">Sábados</h3>
-            </div>
-            <div class="schedule-card__slots">
-              <div class="schedule-slot">
-                <time class="schedule-slot__time" datetime="11:00">11:00 – 12:00</time>
-              </div>
-            </div>
-          </article>
+            <div class="schedule-card-new__divider"></div>
+            <ul class="schedule-card-new__list">
+              <li>
+                <span class="time">06:00 - 07:00</span>
+                <span class="label">Mañana</span>
+              </li>
+              <li>
+                <span class="time">17:00 - 18:00</span>
+                <span class="label">Tarde</span>
+              </li>
+              <li>
+                <span class="time">18:00 - 19:00</span>
+                <span class="label">Tarde</span>
+              </li>
+              <li>
+                <span class="time">19:00 - 20:00</span>
+                <span class="label">Noche</span>
+              </li>
+              <li>
+                <span class="time">20:00 - 21:00</span>
+                <span class="label">Noche</span>
+              </li>
+              <li>
+                <span class="time">21:00 - 22:00</span>
+                <span class="label">Noche</span>
+              </li>
+            </ul>
+            <p class="schedule-card-new__footer">6 clases disponibles</p>
+          </div>
 
         </div>
 
-        <p class="schedule__tagline fade-in">Sin excusas. El momento es ahora.</p>
+        <p class="schedule-footer-text fade-in">
+          Sin excusas. El momento es ahora.
+        </p>
 
       </div>
     </section>
@@ -496,7 +613,7 @@
           <div class="footer__logo">
             <div class="footer__logo-img">
               <img
-                src="./assets/img/logo.png"
+                src="./assets/img/logo.webp"
                 alt="Logo Zona Ninja"
                 width="80"
                 height="80"
@@ -516,83 +633,89 @@
         <!-- Columna Contacto -->
         <nav class="footer__contact fade-in" aria-label="Información de contacto">
           <h2 class="footer__contact-title">Contacto</h2>
-          <address class="footer__contacts" style="font-style:normal;">
+          <div class="footer__contacts-grid">
+            
+            <!-- Sub-columna 1: Correo e Instagram -->
+            <address class="footer__contacts-column" style="font-style:normal;">
+              <a
+                href="mailto:zonaninjafit@gmail.com"
+                class="contact-link"
+                aria-label="Correo: zonaninjafit@gmail.com"
+              >
+                <div class="contact-link__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="contact-link__label">Correo</p>
+                  <p class="contact-link__value">zonaninjafit@gmail.com</p>
+                </div>
+              </a>
 
-            <a
-              href="https://wa.me/593962807366"
-              class="contact-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp: +593 96 280 7366"
-            >
-              <div class="contact-link__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="contact-link__label">WhatsApp</p>
-                <p class="contact-link__value">+593 96 280 7366</p>
-              </div>
-            </a>
+              <a
+                href="https://instagram.com/zonaninjafit"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram: @zonaninjafit"
+              >
+                <div class="contact-link__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="contact-link__label">Instagram</p>
+                  <p class="contact-link__value">@zonaninjafit</p>
+                </div>
+              </a>
+            </address>
 
-            <a
-              href="https://instagram.com/zonaninjafit"
-              class="contact-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram: @zonaninjafit"
-            >
-              <div class="contact-link__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-              </div>
-              <div>
-                <p class="contact-link__label">Instagram</p>
-                <p class="contact-link__value">@zonaninjafit</p>
-              </div>
-            </a>
+            <!-- Sub-columna 2: WhatsApp y Ubicación -->
+            <address class="footer__contacts-column" style="font-style:normal;">
+              <a
+                href="https://wa.me/593962807366"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp: +593 96 280 7366"
+              >
+                <div class="contact-link__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="contact-link__label">WhatsApp</p>
+                  <p class="contact-link__value">+593 96 280 7366</p>
+                </div>
+              </a>
 
-            <a
-              href="mailto:zonaninjafit@gmail.com"
-              class="contact-link"
-              aria-label="Correo: zonaninjafit@gmail.com"
-            >
-              <div class="contact-link__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </div>
-              <div>
-                <p class="contact-link__label">Correo</p>
-                <p class="contact-link__value">zonaninjafit@gmail.com</p>
-              </div>
-            </a>
+              <a
+                href="https://maps.google.com/?q=Mucho+Lote+2,+Cdla+Alameda+del+Río,+Guayaquil"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ubicación: Mucho Lote 2 - Cdla. Alameda del Río"
+              >
+                <div class="contact-link__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="contact-link__label">Ubicación</p>
+                  <p class="contact-link__value">Mucho Lote 2 — Cdla. Alameda del Río</p>
+                </div>
+              </a>
+            </address>
 
-            <a
-              href="https://maps.google.com/?q=Mucho+Lote+2,+Cdla+Alameda+del+Río,+Guayaquil"
-              class="contact-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ubicación: Mucho Lote 2 - Cdla. Alameda del Río"
-            >
-              <div class="contact-link__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <div>
-                <p class="contact-link__label">Ubicación</p>
-                <p class="contact-link__value">Mucho Lote 2 — Cdla. Alameda del Río</p>
-              </div>
-            </a>
-
-          </address>
+          </div>
         </nav>
 
       </div><!-- /footer__grid -->

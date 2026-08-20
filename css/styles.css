@@ -299,18 +299,35 @@ ul, ol {
   background-color: #000;
 }
 
+/* Contenedor que divide el fondo en dos mitades */
+.hero__bg-split {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .hero__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  object-position: center;
+  opacity: 0.9;
 }
+
+/* La imagen izquierda muestra su lado derecho pegado al centro */
+.hero__img--left {
+  object-fit: contain;
+  object-position: right bottom;
+}
+/* La imagen derecha muestra su lado izquierdo pegado al centro */
+.hero__img--right { object-position: left center; }
 
 /* Capa base: oscurece uniformemente sin bloquear los lados */
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.15);
 }
 
 /* Viñeta radial: más oscuro al centro (legibilidad del texto),
@@ -319,8 +336,8 @@ ul, ol {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 65% 90% at 50% 50%, rgba(0,0,0,0.45) 0%, transparent 100%),
-    linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 30%, #0a0a0a 100%);
+    radial-gradient(ellipse 65% 90% at 50% 50%, rgba(0,0,0,0.10) 0%, transparent 100%),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 30%, #0a0a0a 100%);
 }
 
 .hero__streak {
@@ -559,6 +576,166 @@ ul, ol {
   line-height: 1.6;
 }
 
+/* ── 6.5 SECCIÓN DISCIPLINAS ────────────────────────────── */
+.disciplines {
+  background-color: var(--clr-card);
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--section-py);
+}
+
+.disciplines__texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, var(--clr-white) 10px, var(--clr-white) 11px);
+}
+
+.disciplines__header {
+  margin-bottom: 3.5rem;
+}
+
+.disciplines__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 78rem;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.discipline-card {
+  background-color: var(--clr-bg);
+  border-top: 2px solid transparent;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition);
+}
+
+.discipline-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.discipline-card--highlight {
+  border-top-color: var(--clr-primary);
+  box-shadow: 0 -4px 30px rgba(204, 20, 20, 0.05);
+}
+
+.discipline-card__level {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.discipline-card__title {
+  font-family: var(--ff-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.discipline-card__subtitle {
+  font-size: 0.75rem;
+  color: var(--clr-white-55);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.discipline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex-grow: 1;
+}
+
+.discipline-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--clr-white-70);
+}
+
+.discipline-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--clr-primary);
+}
+
+.text-red {
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+.discipline-card__divider {
+  height: 1px;
+  background-color: var(--clr-border);
+  margin-block: 2rem;
+}
+
+.discipline-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--clr-white-55);
+}
+
+.star-icon {
+  color: var(--clr-primary);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.discipline-card__summary-inline {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--clr-card);
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.summary-block__title {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.summary-block__value {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.summary-block__desc {
+  font-size: 0.875rem;
+  color: var(--clr-white-40);
+}
+
+@media (min-width: 640px) {
+  .disciplines__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; /* Slightly larger gap since cards are wider now */
+  }
+}
+
 /* ── 7. SECCIÓN PLANES ──────────────────────────────────── */
 .plans {
   padding-block: var(--section-py);
@@ -594,234 +771,105 @@ ul, ol {
   display: block;
 }
 
-.plans__grid {
+.plan-hero-card {
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-top: 3px solid var(--clr-primary);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 56rem;
+  max-width: 68rem;
   margin-inline: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-/* Plan Card */
-.plan-card {
-  position: relative;
-  background-color: var(--clr-card);
-  border: 1px solid var(--clr-border);
-  overflow: hidden;
+.plan-hero-card__main {
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  transition: border-color var(--transition-slow);
 }
 
-.plan-card--featured {
-  border-color: var(--clr-border-red);
-}
-
-.plan-card:hover {
-  border-color: var(--clr-red-30);
-}
-
-.plan-card__top-bar {
-  height: 4px;
-  background-color: var(--clr-primary);
-  width: 100%;
-}
-
-.plan-card--secondary .plan-card__top-bar {
-  background-color: var(--clr-white-20);
-}
-
-.plan-card__badge {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--clr-primary);
-  color: var(--clr-white);
+.plan-hero-card__title {
   font-family: var(--ff-display);
-  font-size: 0.7rem;
+  font-size: 2.5rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  padding: 0.4rem 0.75rem;
-  line-height: 1.4;
-  text-align: center;
-  transform: rotate(2deg);
-  box-shadow: 0 4px 15px var(--clr-red-30);
+  color: var(--clr-white);
+  line-height: 1;
 }
 
-.plan-card__body {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
-}
-
-.plan-card__name {
+.plan-hero-card__subtitle {
   font-family: var(--ff-display);
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-weight: 900;
   text-transform: uppercase;
-  line-height: 1.1;
-  color: var(--clr-white);
-}
-
-.plan-card__subtitle {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
   color: var(--clr-primary);
-  margin-top: 0.25rem;
+  line-height: 1;
 }
 
-.plan-card--secondary .plan-card__subtitle {
-  color: var(--clr-white-55);
-}
-
-/* Price list */
-.price-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.price-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--clr-border);
-}
-
-.price-item__left {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.price-item__left svg {
-  width: 1rem;
-  height: 1rem;
-  color: var(--clr-primary);
-  stroke: var(--clr-primary);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  flex-shrink: 0;
-}
-
-.price-item__name {
+.plan-hero-card__tag {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--clr-white-70);
+  font-weight: 700;
+  color: var(--clr-white-55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
 }
 
-.price-item__price {
+.plan-hero-card__pricing {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.plan-hero-card__price {
   font-family: var(--ff-display);
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: 900;
   color: var(--clr-white);
-  white-space: nowrap;
+  line-height: 1;
 }
 
-.price-item__price span {
-  font-family: var(--ff-body);
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--clr-white-40);
-}
-
-/* Promo Entre Panas benefits box */
-.benefit-box {
-  background-color: var(--clr-red-08);
-  border: 1px solid var(--clr-red-20);
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.benefit-item__icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: var(--clr-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.benefit-item__icon--outline {
-  background-color: var(--clr-red-15);
-  border: 1px solid var(--clr-red-30);
-}
-
-.benefit-item__icon span {
-  font-family: var(--ff-display);
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: var(--clr-white);
-}
-
-.benefit-item__icon svg {
-  width: 1.375rem;
-  height: 1.375rem;
-  stroke: var(--clr-primary);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.benefit-item__title {
+.plan-hero-card__period {
   font-size: 1rem;
-  font-weight: 700;
-  color: var(--clr-white);
-}
-
-.benefit-item__desc {
-  font-size: 0.875rem;
   color: var(--clr-white-55);
+  margin-left: 0.25rem;
+  font-weight: 700;
 }
 
-.benefit-divider {
-  height: 1px;
-  background-color: var(--clr-border);
-}
-
-.plan-card__disclaimer {
-  font-size: 0.75rem;
-  color: var(--clr-white-40);
+.plan-hero-card__desc {
+  font-size: 0.95rem;
+  color: var(--clr-white-70);
   line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
 }
 
-/* Plan CTA buttons */
+.plan-hero-card__desc strong {
+  color: var(--clr-white);
+  font-weight: 700;
+}
+
+.plan-hero-card__btn {
+  margin-top: auto;
+}
+
 .btn-plan {
   display: block;
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;
   font-family: var(--ff-display);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-align: center;
-  transition: background-color var(--transition), transform var(--transition), color var(--transition), border-color var(--transition);
+  transition: background-color var(--transition), transform var(--transition);
 }
 
 .btn-plan--primary {
   background-color: var(--clr-primary);
   color: var(--clr-white);
-  box-shadow: 0 4px 20px var(--clr-red-30);
-  margin-top: auto;
 }
 
 .btn-plan--primary:hover {
@@ -829,16 +877,248 @@ ul, ol {
   transform: scaleX(1.02);
 }
 
-.btn-plan--outline {
-  background-color: transparent;
-  color: var(--clr-primary);
-  border: 1px solid var(--clr-primary);
-  margin-top: auto;
+.plan-hero-card__benefits {
+  padding: 3rem 2rem;
+  background-color: #080808;
+  border-top: 1px solid var(--clr-border);
 }
 
-.btn-plan--outline:hover {
+.plan-hero-card__list-title {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+.plan-hero-card__disciplines {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.plan-hero-card__disciplines li {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
+.plan-hero-card__disciplines svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--clr-primary);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.plan-hero-card__divider {
+  height: 1px;
+  background-color: var(--clr-border);
+  margin-block: 2rem;
+}
+
+.plan-hero-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.plan-hero-card__features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--clr-white-70);
+}
+
+.plan-hero-card__features svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--clr-primary);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .plan-hero-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .plan-hero-card__main {
+    padding: 4rem;
+  }
+  
+  .plan-hero-card__benefits {
+    padding: 4rem;
+    border-top: none;
+    border-left: 1px solid var(--clr-border);
+  }
+}
+
+/* Tarjeta Clase Diaria */
+.plan-daily-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--clr-border);
+  background-color: var(--clr-card);
+  padding: 1.5rem;
+}
+
+.plan-daily-card__badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-border-red);
+  padding: 0.3rem 0.75rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.plan-daily-card__title {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.plan-daily-card__discipline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-white-55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.plan-daily-card__discipline svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--clr-primary);
+  flex-shrink: 0;
+}
+
+.plan-daily-card__center {
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  padding-block: 1rem;
+}
+
+.plan-daily-card__desc {
+  font-size: 0.9rem;
+  color: var(--clr-white-55);
+  line-height: 1.5;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plan-daily-card__desc li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.plan-daily-card__desc li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--clr-primary);
+  font-weight: 900;
+}
+.plan-daily-card__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.plan-daily-card__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.plan-daily-card__price {
+  font-family: var(--ff-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.plan-daily-card__period {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-white-40);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.plan-daily-card__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  font-family: var(--ff-display);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--clr-white);
+  border: 1px solid var(--clr-primary);
+  transition: background-color var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.plan-daily-card__btn:hover {
   background-color: var(--clr-primary);
   color: var(--clr-white);
+}
+
+@media (min-width: 640px) {
+  .plan-daily-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .plan-daily-card__left {
+    flex: 0 1 auto;
+  }
+
+  .plan-daily-card__center {
+    flex: 0 1 auto;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--clr-border);
+    border-right: 1px solid var(--clr-border);
+    padding-block: 0;
+    padding-inline: 6rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+  }
+
+  .plan-daily-card__right {
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
 }
 
 /* ── 8. SECCIÓN HORARIOS ────────────────────────────────── */
@@ -856,83 +1136,128 @@ ul, ol {
   justify-content: center;
 }
 
-.schedule__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 48rem;
+.schedule-banner {
+  border: 1px solid var(--clr-red-20);
+  background-color: var(--clr-card);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  text-align: center;
+  gap: 1rem;
+  color: var(--clr-white-55);
+  font-size: 0.9rem;
+  max-width: 64rem;
   margin-inline: auto;
 }
 
-.schedule-card {
-  background-color: var(--clr-card);
-  border: 1px solid var(--clr-border);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  transition: border-color var(--transition-slow);
+.schedule-banner strong {
+  color: var(--clr-white);
 }
 
-.schedule-card:hover {
-  border-color: var(--clr-red-30);
-}
-
-.schedule-card__header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.schedule-card__header svg {
+.schedule-banner svg {
+  color: var(--clr-primary);
   width: 1.25rem;
   height: 1.25rem;
-  stroke: var(--clr-primary);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
   flex-shrink: 0;
 }
 
-.schedule-card__day {
-  font-family: var(--ff-display);
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--clr-white);
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 32rem; /* Adjusted for single card layout */
+  margin-inline: auto;
 }
 
-.schedule-card__slots {
+.schedule-card-new {
+  border: 1px solid var(--clr-border);
+  background-color: var(--clr-card); /* Lighter tone as requested */
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 }
 
-.schedule-slot {
+.schedule-card-new__header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  border-left: 3px solid var(--clr-primary);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-.schedule-slot__time {
+.schedule-card-new__header h3 {
   font-family: var(--ff-display);
   font-size: 1.5rem;
   font-weight: 900;
+  text-transform: uppercase;
   color: var(--clr-white);
+  line-height: 1;
 }
 
-.schedule__tagline {
-  text-align: center;
+.schedule-card-new__header svg {
+  color: var(--clr-primary);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.schedule-card-new__divider {
+  height: 1px;
+  background-color: var(--clr-border);
+  margin-bottom: 2rem;
+}
+
+.schedule-card-new__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.schedule-card-new__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  border-left: 2px solid var(--clr-primary);
+}
+
+.schedule-card-new__list .time {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.schedule-card-new__list .label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.schedule-card-new__footer {
+  font-size: 0.7rem;
+  font-weight: 700;
   color: var(--clr-white-40);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 3rem;
+}
+
+.schedule-footer-text {
+  text-align: center;
   font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--clr-white-40);
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
+
+
 
 /* ── 9. FOOTER ──────────────────────────────────────────── */
 .site-footer {
@@ -1011,9 +1336,23 @@ ul, ol {
   letter-spacing: 0.2em;
   color: var(--clr-white);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.footer__contacts {
+.footer__contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .footer__contacts-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.footer__contacts-column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1185,8 +1524,31 @@ ul, ol {
   }
 
   .offerings__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
+
+  .offering-card {
+    grid-column: span 2;
+  }
+
+  /* Centrar las últimas dos tarjetas en la fila de 3 */
+  .offering-card:nth-child(7) {
+    grid-column: 2 / span 2;
+  }
+
+  .offering-card:nth-child(8) {
+    grid-column: 4 / span 2;
+  }
+
+  /* Rellenar los huecos vacíos para mantener el diseño del borde de 1px */
+  .offerings__grid::before,
+  .offerings__grid::after {
+    content: '';
+    background-color: var(--clr-bg);
+    grid-row: 3;
+  }
+  .offerings__grid::before { grid-column: 1 / span 1; }
+  .offerings__grid::after { grid-column: 6 / span 1; }
 
   .footer__grid {
     grid-template-columns: 1fr 1fr;
