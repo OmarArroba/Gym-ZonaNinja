@@ -1,4 +1,4 @@
-# Zona Ninja 🥷
+# Zona Ninja
 
 Landing page para el **Centro de Entrenamiento Zona Ninja** — Funcional · Cross · OCR, ubicado en Guayaquil, Ecuador.
 
@@ -12,7 +12,7 @@ Landing page para el **Centro de Entrenamiento Zona Ninja** — Funcional · Cro
 
 ---
 
-## 📌 Sobre el proyecto
+## Sobre el proyecto
 
 Diseño y desarrollo completo de una landing page para un gimnasio real, partiendo de un prototipo en **Figma** exportado con React + Vite + TailwindCSS, y refactorizado a **HTML, CSS y JavaScript puro** para máximo rendimiento y simplicidad de despliegue.
 
@@ -36,7 +36,7 @@ Convertir un proyecto React/Vite de 60+ dependencias en un sitio estático profe
 
 ---
 
-## ✨ Características técnicas
+## Características técnicas
 
 - **0 dependencias** — el sitio corre directamente en el navegador
 - **Diseño responsivo** — Mobile · Tablet · Desktop con 3 breakpoints
@@ -48,7 +48,7 @@ Convertir un proyecto React/Vite de 60+ dependencias en un sitio estático profe
 
 ---
 
-## 🗂️ Estructura del proyecto
+## Estructura del proyecto
 
 ```
 zona-ninja-github/
@@ -66,7 +66,7 @@ zona-ninja-github/
 
 ---
 
-## 📐 Secciones de la landing page
+## Secciones de la landing page
 
 | # | Sección | Descripción |
 |---|---|---|
@@ -78,7 +78,7 @@ zona-ninja-github/
 
 ---
 
-## 🔄 Proceso de refactorización
+## Proceso de refactorización
 
 El proyecto original fue exportado desde **Figma** como una app **React 18 + Vite + TailwindCSS v4** con más de 60 dependencias (Radix UI, MUI, Recharts, etc.), de las cuales el 99% no se utilizaba.
 
@@ -92,7 +92,7 @@ El proyecto original fue exportado desde **Figma** como una app **React 18 + Vit
 
 ---
 
-## 📞 Contacto del cliente
+## Contacto del cliente
 
 | Canal | Dato |
 |---|---|
