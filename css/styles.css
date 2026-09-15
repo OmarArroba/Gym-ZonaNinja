@@ -1506,39 +1506,43 @@ ul, ol {
 }
 
 /* Animaciones personalizadas para sección Disciplinas */
-/* Móvil: izquierda / derecha / izquierda */
+/* Desactiva la transición genérica del hover para las discipline-cards en este contexto */
 .disciplines__grid .discipline-card {
-  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease !important;
 }
-
-.disciplines__grid .discipline-card:nth-child(1).fade-in {
-  transform: translateX(-5rem);
-}
-.disciplines__grid .discipline-card:nth-child(2).fade-in {
-  transform: translateX(5rem);
-}
-.disciplines__grid .discipline-card:nth-child(3).fade-in {
-  transform: translateX(-5rem);
-}
-
 .disciplines__grid .discipline-card.fade-in.visible {
-  transform: translate(0, 0);
+  opacity: 1;
+  transform: translate(0, 0) !important;
+}
+
+/* Móvil: izquierda / derecha / izquierda – con delay escalonado */
+.disciplines__grid .discipline-card:nth-child(1) {
+  transform: translateX(-5rem);
+  transition-delay: 0s !important;
+}
+.disciplines__grid .discipline-card:nth-child(2) {
+  transform: translateX(5rem);
+  transition-delay: 0.15s !important;
+}
+.disciplines__grid .discipline-card:nth-child(3) {
+  transform: translateX(-5rem);
+  transition-delay: 0.3s !important;
 }
 
 @media (min-width: 640px) {
   /* Desktop: izquierda / abajo / derecha */
-  .disciplines__grid .discipline-card:nth-child(1).fade-in {
+  .disciplines__grid .discipline-card:nth-child(1) {
     transform: translateX(-5rem);
+    transition-delay: 0s !important;
   }
-  .disciplines__grid .discipline-card:nth-child(2).fade-in {
+  .disciplines__grid .discipline-card:nth-child(2) {
     transform: translateY(5rem);
+    transition-delay: 0.2s !important;
   }
-  .disciplines__grid .discipline-card:nth-child(3).fade-in {
+  .disciplines__grid .discipline-card:nth-child(3) {
     transform: translateX(5rem);
-  }
-  /* Asegurar reset de posición dentro del mismo media query */
-  .disciplines__grid .discipline-card.fade-in.visible {
-    transform: translate(0, 0);
+    transition-delay: 0.4s !important;
   }
 }
 

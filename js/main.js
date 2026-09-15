@@ -49,12 +49,12 @@
   /* ── Fade-in al scroll (IntersectionObserver) ─────────── */
   const fadeEls = document.querySelectorAll(".fade-in");
 
-  if ("IntersectionObserver" in window && fadeEls.length) {
+  if ('IntersectionObserver' in window && fadeEls.length) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target); // sólo una vez
           }
         });
@@ -64,7 +64,26 @@
     fadeEls.forEach((el) => observer.observe(el));
   } else {
     /* Fallback para navegadores antiguos */
-    fadeEls.forEach((el) => el.classList.add("visible"));
+    fadeEls.forEach((el) => el.classList.add('visible'));
+  }
+
+  /* ── Animación de desplazamiento para tarjetas de Disciplinas ── */
+  const disciplineCards = document.querySelectorAll('.disciplines__grid .discipline-card');
+  if ('IntersectionObserver' in window && disciplineCards.length) {
+    const disciplineObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            disciplineObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+    disciplineCards.forEach((el) => disciplineObserver.observe(el));
+  } else {
+    disciplineCards.forEach((el) => el.classList.add('visible'));
   }
 
   /* ── Header shrink on scroll ──────────────────────────── */
