@@ -1511,7 +1511,7 @@ ul, ol {
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease !important;
 }
-.disciplines__grid .discipline-card.fade-in.visible {
+.disciplines__grid .discipline-card.visible {
   opacity: 1;
   transform: translate(0, 0) !important;
 }
