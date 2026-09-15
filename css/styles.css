@@ -1506,26 +1506,39 @@ ul, ol {
 }
 
 /* Animaciones personalizadas para sección Disciplinas */
+/* Móvil: izquierda / derecha / izquierda */
+.disciplines__grid .discipline-card {
+  transition: opacity 1s ease, transform 1s ease;
+}
+
 .disciplines__grid .discipline-card:nth-child(1).fade-in {
-  transform: translateX(-3rem);
+  transform: translateX(-5rem);
 }
 .disciplines__grid .discipline-card:nth-child(2).fade-in {
-  transform: translateX(3rem);
+  transform: translateX(5rem);
 }
 .disciplines__grid .discipline-card:nth-child(3).fade-in {
-  transform: translateX(-3rem);
+  transform: translateX(-5rem);
 }
 
 .disciplines__grid .discipline-card.fade-in.visible {
-  transform: translate(0);
+  transform: translate(0, 0);
 }
 
 @media (min-width: 640px) {
+  /* Desktop: izquierda / abajo / derecha */
+  .disciplines__grid .discipline-card:nth-child(1).fade-in {
+    transform: translateX(-5rem);
+  }
   .disciplines__grid .discipline-card:nth-child(2).fade-in {
-    transform: translateY(3rem);
+    transform: translateY(5rem);
   }
   .disciplines__grid .discipline-card:nth-child(3).fade-in {
-    transform: translateX(3rem);
+    transform: translateX(5rem);
+  }
+  /* Asegurar reset de posición dentro del mismo media query */
+  .disciplines__grid .discipline-card.fade-in.visible {
+    transform: translate(0, 0);
   }
 }
 
