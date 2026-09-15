@@ -1505,6 +1505,30 @@ ul, ol {
   transform: translateY(0);
 }
 
+/* Animaciones personalizadas para sección Disciplinas */
+.disciplines__grid .discipline-card:nth-child(1).fade-in {
+  transform: translateX(-3rem);
+}
+.disciplines__grid .discipline-card:nth-child(2).fade-in {
+  transform: translateX(3rem);
+}
+.disciplines__grid .discipline-card:nth-child(3).fade-in {
+  transform: translateX(-3rem);
+}
+
+.disciplines__grid .discipline-card.fade-in.visible {
+  transform: translate(0);
+}
+
+@media (min-width: 640px) {
+  .disciplines__grid .discipline-card:nth-child(2).fade-in {
+    transform: translateY(3rem);
+  }
+  .disciplines__grid .discipline-card:nth-child(3).fade-in {
+    transform: translateX(3rem);
+  }
+}
+
 /* ── 11. RESPONSIVE ─────────────────────────────────────── */
 
 /* Tablet ≥ 640px */
