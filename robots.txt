@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gym-zonaninja.netlify.app/sitemap.xml
+Sitemap: https://zonaninja.netlify.app/sitemap.xml
